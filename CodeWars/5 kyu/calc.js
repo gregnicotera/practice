@@ -1,4 +1,4 @@
-const multiply = (num1, num2) => num1 * num2function expression(number, op){
+function expression(number, op){
   return !op ? number : op(number);
 }
 
