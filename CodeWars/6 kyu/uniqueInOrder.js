@@ -15,22 +15,5 @@ Pseudocode:
 */
 
 var uniqueInOrder = function(iterable){
-  if(!iterable){
-    return []
-  }
-  else{
-    if(iterable.length === 1){
-      if(Array.isArray(iterable)){
-        return iterable
-      }else{
-        return [iterable]
-      }
-    }else if(iterable.length > 1){
-      if(!Array.isArray(iterable)){
-        iterable = iterable.split('')
-      }
-      return iterable.filter((e,i) => iterable[i] != iterable[i + 1])
-    }
-  }
-  
+      return [...iterable].filter((e,i) => 	 e !== iterable[i + 1])
 }
