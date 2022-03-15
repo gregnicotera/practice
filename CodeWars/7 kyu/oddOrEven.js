@@ -1,6 +1,3 @@
-function oddOrEven(array) {
-  if(array && array.length > 0){
-    return array.reduce((a,b) => a + b, 0) % 2 === 0 ? "even" : "odd"
-  }
-  return "even"
+function oddOrEven(n) {
+  return n % 2 ? EITHER : n / 2 % 2 ? ODD : EVEN
 }
