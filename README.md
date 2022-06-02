@@ -1,5 +1,5 @@
 # Codewars Practice
-This repo serves as a compilation of each Codewars kata I completed. I made a goal of doing atleast one kata per day in JS.
+This repo serves as a compilation of each Codewars kata I completed. To practice javascript, I made a goal of doing one or more kata per day. 
 
 **Link to my Codewars Profile:** https://www.codewars.com/users/gregnicotera
 
@@ -10,7 +10,7 @@ This repo serves as a compilation of each Codewars kata I completed. I made a go
 
 
 ## Examples:
-Take a look at these couple examples that I have in my own portfolio:
+Take a look at these other projects that I have in my own portfolio:
 
 **Tic Tac Toe:** https://github.com/gregnicotera/Tic-Tac-Toe-App
 
