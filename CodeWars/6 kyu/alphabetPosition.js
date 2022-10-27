@@ -1,7 +1,7 @@
 function alphabetPosition(text) {
-  return text
-    .toUpperCase()
-    .match(/[a-z]/gi)
-    .map( (c) => c.charCodeAt() - 64)
-    .join(' ');
+  return text.toLowerCase()
+              .split('')
+              .filter(e => e.match(/[a-z]/))
+              .map(e => e.charCodeAt() - 96)
+              .join(' ');
 }
