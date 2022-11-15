@@ -25,18 +25,18 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
  
  */
 function lengthOfLongestSubstring(s){
-    //two pointer
-	//loop through all substrings
-		//check each char start pos to all end pos
-		//start with 0 and save longer substrings w/ no repeats
-	let sub = '';
-	let biggest = 0;
-	for(let i = 0; i < s.length; i++){
-		for(let j = 1; j < s.length; j++){
-			sub = s.substring(i,j);
-			if(sub.length > biggest && !sub.match(/.+/)){
-				biggest = sub.length;
-			}
+	//sliding window - optimized\
+	let charStore = {};
+	let result = 0;
+	//loop through string where range of substring we test is [i,j] staring at j = 0 and incrementing by one
+	for(let i = 0, j = 0; j < s.length; j++){
+		//check to see if we've stored char at pos j yet, if so slide window along to start there
+		if(charStore.hasOwnProperty(s.charAt(j))){
+			i = Math.max(charStore[s.charAt(j)], i)
 		}
+		result = Math.max(result, j - i + 1);
+		charStore[s.charAt(j)] = j + 1;
 	}
+	
+	return result
 }
